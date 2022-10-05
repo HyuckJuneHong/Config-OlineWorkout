@@ -1,1 +1,13 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-service
+
+  cloud:
+    config:
+      server:
+        git:   #file? ?? ???? ??? file:// ? ?? / MAC=command + option + C or pwd
+          uri: file:///Users/hongyeongjune/IdeaProjects/git-local-config
 
