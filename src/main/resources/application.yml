@@ -1,13 +1,26 @@
 server:
   port: 8888
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh
+
 spring:
   application:
     name: config-service
 
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
   cloud:
     config:
       server:
-        git:   #file? ?? ???? ??? file:// ? ?? / MAC=command + option + C or pwd
-          uri: file:///Users/hongyeongjune/IdeaProjects/git-local-config
+        git:
+          default-label: master
+          uri: https://github.com/HyuckJuneHong/git-local-config
 
