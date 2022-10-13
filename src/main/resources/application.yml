@@ -7,6 +7,15 @@ management:
       exposure:
         include: health, busrefresh
 
+#encrypt:
+#  key: abcdefghijklmnopqrstuvwxy0123456789
+
+encrypt:
+  key-store:
+    location: file://${user.home}/keystore/apiEncryptionKey.jks
+    password: test1234
+    alias: apiencryption
+
 spring:
   application:
     name: config-service
